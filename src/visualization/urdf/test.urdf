@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="sensor_system" >
+
+<!-- Sensorsystem body -->
+  <link name ="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.08" radius="0.0825"/>
+      </geometry>
+    </visual>
+  </link>
+
+<!-- Ultrasonic sensors -->
+  <link name ="us_1">
+  </link>
+  
+  <link name ="us_2">
+  </link> 
+
+  <link name ="us_3">
+  </link>
+
+  <link name ="us_4">
+  </link>
+
+  <link name ="us_5">
+  </link>
+
+  <link name ="us_6">
+  </link> 
+
+  <link name ="us_7">
+  </link>
+
+  <link name ="us_8">
+  </link>
+
+  <link name ="us_9">
+  </link>
+
+<!-- Infrared sensors-->
+  <link name ="ir_1">
+  </link>
+  
+  <link name ="ir_2">
+  </link> 
+
+  <link name ="ir_3">
+  </link>
+
+  <link name ="ir_4">
+  </link>
+
+  <link name ="ir_5">
+  </link>
+
+<!-- Body to ultrasonic sensors -->
+  <joint name="body_to_us5" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_5"/>
+    <origin rpy="0 0 -1.5708" xyz="0 -0.0825 -0.0175"/>
+  </joint>
+
+  <joint name="body_to_us4" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_4"/>
+    <origin rpy="0 0 -0.7854" xyz="0.0583 -0.0583 0.0175"/>
+  </joint>
+
+  <joint name="body_to_us3" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_3"/>
+    <origin rpy="0 0 0" xyz="0.0825 0 -0.0175"/>
+  </joint>
+
+  <joint name="body_to_us2" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_2"/>
+    <origin rpy="0 0 0.7854" xyz="0.0583 0.0583 -0.0175"/>
+  </joint>
+
+  <joint name="body_to_us1" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_1"/>
+    <origin rpy="0 0 1.5708" xyz="0 0.0825 -0.0175"/>
+  </joint>
+
+  <joint name="body_to_us6" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_6"/>
+    <origin rpy="0 0 -1.178" xyz="0.0313 -0.0763 0.045"/>
+  </joint>
+
+  <joint name="body_to_us7" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_7"/>
+    <origin rpy="0 0 -0.39" xyz="0.0762 -0.0315 0.045"/>
+  </joint>
+
+  <joint name="body_to_us8" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_8"/>
+    <origin rpy="0 0 0.39" xyz="0.0763 0.0315 0.045"/>
+  </joint>
+
+  <joint name="body_to_us9" type="fixed">
+    <parent link="base_link"/>
+    <child link="us_9"/>
+    <origin rpy="0 0 1.178" xyz="0.0315 0.0763 0.045"/>
+  </joint>
+
+<!-- Body to infrared sensors -->
+  <joint name="body_to_ir1" type="fixed">
+    <parent link="base_link"/>
+    <child link="ir_1"/>
+    <origin rpy="0 0 -1.5708" xyz="0 -0.0825 0.015"/>
+  </joint>
+
+  <joint name="body_to_ir2" type="fixed">
+    <parent link="base_link"/>
+    <child link="ir_2"/>
+    <origin rpy="0 0 -0.7854" xyz="0.0583 -0.0583 0.015"/>
+  </joint>
+
+  <joint name="body_to_ir3" type="fixed">
+    <parent link="base_link"/>
+    <child link="ir_3"/>
+    <origin rpy="0 0 0" xyz="0.0825 0 0.015"/>
+  </joint>
+
+  <joint name="body_to_ir4" type="fixed">
+    <parent link="base_link"/>
+    <child link="ir_4"/>
+    <origin rpy="0 0 0.7854" xyz="0.0583 0.0583 0.015"/>
+  </joint>
+
+  <joint name="body_to_ir5" type="fixed">
+    <parent link="base_link"/>
+    <child link="ir_5"/>
+    <origin rpy="0 0 1.5708" xyz="0 0.0825 0.015"/>
+  </joint>
+</robot>
+
