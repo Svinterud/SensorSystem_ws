@@ -1,0 +1,4 @@
+# SensorSystem_ws
+Et lavkost prototype system for innendørs autonome kjøretøy. Systemet er bygget på ROS2 og inneholder node for å lese og gjøre verdier ifra avstandsensorer forståelige for ros, samt en node for å beregne posisjonen til kjøretøyet ut ifra visuelle landemerker i taket i form av QR-koder. Disse leses med en kamera, og QR-kodene må inneholde dems egen posisjon i forhold til miljøet. Ut ifra kjøretøyet sin plassering i forhold til QR-kodene beregnes kjøretøyets plassering i forhold til miljøet.
+
+Systemet er testet på en Raspberry Pi 4b med lovende resultater. Det ble i tillegg benyttet et Inted Realsense D435 kamera for å mappe omgivelsene. Dette ga også gode resultater, men det avhenger av en ekstern kilde som gir odometry-data. Odometry-dataen kan også beregnes ut ifra dataen fra kameraet, men dette viste seg å være en krevende prosess og ga ikke like gode resulteter som med en ekstern kilde. 
